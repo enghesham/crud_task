@@ -9,8 +9,8 @@ To run the project go to steps:
 8- php artisan serve
 
  * add fake data using tinker
-php artisan ti 
-App\Models\Contact::factory(10)->create();
+-php artisan ti 
+-App\Models\Contact::factory(10)->create();
 
 
 ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/66676671/232153471-3b3493ca-ad89-4bf8-9aee-4fd84711705c.gif)
