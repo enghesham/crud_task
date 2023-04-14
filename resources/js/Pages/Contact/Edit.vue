@@ -82,8 +82,20 @@
                                         rounded
                                     "
                                 >
-                                    Save
+                                    Edit
                                 </button>
+                                <a
+                                    class="
+                                        px-6
+                                        py-2
+                                        text-white
+                                        bg-red-900
+                                        rounded
+                                    "
+                                    @click="destroy()"
+                                >
+                                    Delete
+                            </a>
                             </div>
                         </form>
                     </div>
@@ -118,6 +130,10 @@ export default {
         submit() {
             this.form.put(route("contact.update", this.contact.id));
         },
+        destroy() {
+            this.$inertia.delete(route("contact.destroy", this.contact.id));
+        },
     },
+    
 };
 </script>

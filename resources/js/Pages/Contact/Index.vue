@@ -37,24 +37,24 @@
                                 <td class="px-4 py-2">Action</td>
                             </thead>
                             <tbody>
-                                <tr v-for="post in contact.data" :key="post.id">
-                                    <td class="px-4 py-2">{{ post.name }}</td>
-                                    <td class="px-4 py-2">{{ post.phone }}</td>
+                                <tr v-for="contact in contact.data" :key="contact.id">
+                                    <td class="px-4 py-2">{{ contact.name }}</td>
+                                    <td class="px-4 py-2">{{ contact.phone }}</td>
                                     <td class="px-4 py-2">
-                                        {{ post.email }}
+                                        {{ contact.email }}
                                     </td>
                                     <td class="px-4 py-2 font-extrabold">
                                         <Link
                                             class="text-green-700"
-                                            :href="route('contact.edit', post.id)"
+                                            :href="route('contact.edit', contact.id)"
                                         >
-                                            Edit
+                                           Details
                                         </Link>
-                                        <Link
-                                            @click="destroy(post.id)"
+                                        <!-- <Link
+                                            @click="destroy(contact.id)"
                                             class="text-red-700"
                                             >Delete</Link
-                                        >
+                                        > -->
                                     </td>
                                 </tr>
                             </tbody>
@@ -85,10 +85,10 @@ export default {
     props: {
         contact: Object,
     },
-    methods: {
-        destroy(id) {
-            this.$inertia.delete(route("contact.destroy", id));
-        },
-    },
+    // methods: {
+    //     destroy(id) {
+    //         this.$inertia.delete(route("contact.destroy", id));
+    //     },
+    // },
 };
 </script>
